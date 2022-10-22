@@ -1,8 +1,12 @@
 import docx
 from docx.shared import RGBColor
+from docx.shared import RGBColor
 
-def readtxt("SRS_ACE_Pump_X01.docx"):
-    doc = docx.Document("SRS_ACE_Pump_X01.docx")
+filename = "SRS_ACE_Pump_X00.docx"
+
+
+def readtxt(filename):
+    doc = docx.Document(filename)
     fullText = []
     for para in doc.paragraphs:
         for run in para.runs:
@@ -10,4 +14,7 @@ def readtxt("SRS_ACE_Pump_X01.docx"):
                 fullText.append(run.text)
     return fullText
 
-fullText = readtxt(/Users/Willi/Desktop7/docx red color/SRS_ACE_Pump_X01.docx)
+
+fullText = readtxt("SRS_ACE_Pump_X00.docx")
+
+print(fullText)
