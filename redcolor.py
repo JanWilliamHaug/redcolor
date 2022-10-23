@@ -42,21 +42,34 @@ report = Document()
 
 
 w = (s.replace (']', ']\n'))
-paragraph = report.add_paragraph("SRS Ace Pump Document")
+paragraph = report.add_paragraph()
+runner = paragraph.add_run("\nSRS Ace Pump Document")
+runner.bold = True #makes the header bold
 paragraph = report.add_paragraph(w)
 
+runner = paragraph.add_run("\nPRS new Pump Document")
+runner.bold = True
 
-paragraph = report.add_paragraph("PRS_new_pump.docx")
+filename2 = "`PRS_new_pump.docx"
+fullText2 = readtxt("PRS_new_pump.docx")
 
-filename2 = "PRS_new_pump.docx"
-
-fullText2 = readtxt("SRS_ACE_Pump_X00.docx")
 b = ''.join(fullText2)
-w = (b.replace (']', ']\n'))
+c = (b.replace (']', ']\n'))
 print(w)
 
-paragraph = report.add_paragraph(w)
+paragraph = report.add_paragraph(c)
+
+
+runner = paragraph.add_run("\nHTP_new_pump.docx")
+runner.bold = True
+
+filename3 = "HTP_new_pump.docx"
+fullText3 = readtxt("HTP_new_pump.docx")
+
+d = ''.join(fullText3)
+e = (d.replace (']', ']\n'))
+print(e)
+
+paragraph = report.add_paragraph(e)
 
 report.save('report1.docx')
-
-
