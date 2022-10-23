@@ -72,4 +72,31 @@ print(e)
 
 paragraph = report.add_paragraph(e)
 
+
+'''report.add_heading('System Details', 0)
+# Table data in a form of list
+data = (
+    (s, w, e),
+    (s, w, e),
+    (s, w, e)
+)
+# Creating a table object
+table = report.add_table(rows=1, cols=3)
+# Adding heading in the 1st row of the table
+row = table.rows[0].cells
+row[0].text = 'Entry Tag'
+row[1].text = 'Info'
+row[2].text = 'Ending Tag'
+# Adding data from the list to the table
+for id, info, end in data:
+    # Adding a row and then adding data in it.
+    row = table.add_row().cells
+    # Converting id to string as table can only take string input
+    row[0].text = id
+    row[1].text = info
+    row[2].text = end
+
+table.style = 'Colorful List'
+'''
+
 report.save('report1.docx')
