@@ -21,9 +21,10 @@ fullText = readtxt("SRS_ACE_Pump_X00.docx")
 #print(fullText)
 #print(fullText[5])
 
-#report = Document()
+report = Document()
 #paragraph = report.add_paragraph(fullText[1])
-#report.save('report1.docx')
+paragraph = report.add_paragraph(fullText)
+report.save('report1.docx')
 
 print(fullText)
 
